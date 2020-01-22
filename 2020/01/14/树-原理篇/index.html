@@ -291,9 +291,9 @@
 <p>前驱结点：节点val值小于该结点val值并且值最大的结点<br>后继结点：节点val值大于该结点val值并且值最小的结点</p>
 </blockquote>
 <h1 id="树的性质"><a href="#树的性质" class="headerlink" title="树的性质"></a>树的性质</h1><p>1.非空树的结点总数等于树中所有结点的度之和加1<br>2.度为k的非空树的第i层最多有 $k^{i-1}$ 个结点，其中i&gt;=1<br>3.深度为h的k叉树最多有$\frac{k^{h}-1}{k-1}$ 个结点<br>4.具有n个结点的k叉树的最小深度为$\left \lceil \log_{k}(n(k-1)+1) \right \rceil$  ,$\left \lceil x \right \rceil$  表示向上取整(大于等于x的最小整数)</p>
-<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="二叉树性质"><a href="#二叉树性质" class="headerlink" title="二叉树性质"></a>二叉树性质</h2><p>1.二叉树中，第 i 层最多有$2^{i-1}$ 个结点。<br>2.高度为k的二叉树最多有 $2^{k}-1$ 个结点。<br>3.二叉树中，叶子结点数为 $n<em>{0}$，度为 2 (双分支)的结点数为$n</em>{2}$，则 $n<em>{0}=n</em>{2}+1$ 。<br>4.具有n(n&gt;0)个结点的完全二叉树的深度为$h=\left \lceil \log<em>{2}(n+1) \right \rceil$ 或$h=\left \lfloor log</em>{2}n \right \rfloor +1$</p>
+<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="二叉树性质"><a href="#二叉树性质" class="headerlink" title="二叉树性质"></a>二叉树性质</h2><p>1.二叉树中，第 i 层最多有$2^{i-1}$ 个结点。<br>2.高度为k的二叉树最多有 $2^{k}-1$ 个结点。<br>3.二叉树中，叶子结点数为 $n_{0}$，度为 2 (双分支)的结点数为$n_{2}$，则 $n_{0}=n_{2}+1$ 。<br>4.具有n(n&gt;0)个结点的完全二叉树的深度为$h=\left \lceil \log_{2}(n+1) \right \rceil$ 或$h=\left \lfloor log_{2}n \right \rfloor +1$</p>
 <blockquote>
-<p>性质 3 的计算方法为：对于一个二叉树来说，除了度为 0 的叶子结点和度为 2 的结点，剩下的就是度为 1 的结点（设为$n<em>{1}$），那么总结点 $n=n</em>{0} + n<em>{1} + n</em>{2}$  。<br>同时，对于每一个结点来说都是由其父结点分支表示的，假设树中分枝数为 B，那么总结点数 n=B+1。而分枝数是可以通过$n<em>{1}$和$n</em>{2}$表示的，即<script type="math/tex">B=n_{1}+2*n_{2}</script> 。所以，n 用另外一种方式表示为 $n=n<em>{1}+2*n</em>{2}+1$ 。<br>两种方式得到的 n 值组成一个方程组，就可以得出 $n<em>{0}=n</em>{2}+1$。</p>
+<p>性质 3 的计算方法为：对于一个二叉树来说，除了度为 0 的叶子结点和度为 2 的结点，剩下的就是度为 1 的结点（设为$n_{1}$），那么总结点 $n=n_{0} + n_{1} + n_{2}$  。<br>同时，对于每一个结点来说都是由其父结点分支表示的，假设树中分枝数为 B，那么总结点数 n=B+1。而分枝数是可以通过$n_{1}$和$n_{2}$表示的，即<script type="math/tex">B=n_{1}+2*n_{2}</script> 。所以，n 用另外一种方式表示为 $n=n_{1}+2*n_{2}+1$ 。<br>两种方式得到的 n 值组成一个方程组，就可以得出 $n_{0}=n_{2}+1$。</p>
 </blockquote>
 <p>二叉树还可以继续分类，衍生出满二叉树和完全二叉树。</p>
 <h3 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h3><p>如果二叉树中除了叶子结点，每个结点的度都为 2，则此二叉树称为满二叉树。共有有$2^{h}-1$个节点</p>
@@ -338,7 +338,7 @@
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="/2020/01/14/%E6%A0%91-%E5%8E%9F%E7%90%86%E7%AF%87/二叉查找树1.gif">
 </center>
 
-<p>根据这一特点，查找算法的时间复杂度应该是$O(log<em>{2}n)$ ，简写为$O(\lg n)$<br> BST 算法查找时间依赖于树的拓扑结构。最佳情况是$O(log</em>{2}n)$，而最坏情况是$O(n)$。</p>
+<p>根据这一特点，查找算法的时间复杂度应该是$O(log_{2}n)$ ，简写为$O(\lg n)$<br> BST 算法查找时间依赖于树的拓扑结构。最佳情况是$O(log_{2}n)$，而最坏情况是$O(n)$。</p>
 <h2 id="插入结点算法"><a href="#插入结点算法" class="headerlink" title="插入结点算法"></a>插入结点算法</h2><ol>
 <li>若b是空树，则将s所指结点作为根节点插入，否则：</li>
 <li>若s-&gt;data等于b的根节点的数据域之值，则返回，或者报错，否则：</li>
@@ -718,7 +718,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
