@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="区块链开发岗位需要用到的知识，区块链、Go以及docker等等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试-区块链开发">
+<meta property="og:url" content="http://yoursite.com/2020/01/21/%E9%9D%A2%E8%AF%95-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91/index.html">
+<meta property="og:site_name" content="群芳髓">
+<meta property="og:description" content="区块链开发岗位需要用到的知识，区块链、Go以及docker等等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-21T14:22:20.000Z">
+<meta property="article:modified_time" content="2020-01-21T15:20:23.213Z">
+<meta property="article:author" content="chen">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/01/21/%E9%9D%A2%E8%AF%95-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>面试-区块链开发 | 群芳髓</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">群芳髓</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/21/%E9%9D%A2%E8%AF%95-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="chen">
+      <meta itemprop="description" content="冰冻三尺 非一日之寒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="群芳髓">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          面试-区块链开发
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-21 22:22:20 / 修改时间：23:20:23" itemprop="dateCreated datePublished" datetime="2020-01-21T22:22:20+08:00">2020-01-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>区块链开发岗位需要用到的知识，区块链、Go以及docker等等。</p>
+<a id="more"></a>
+<h1 id="区块链"><a href="#区块链" class="headerlink" title="区块链"></a>区块链</h1><h2 id="什么是共识机制"><a href="#什么是共识机制" class="headerlink" title="什么是共识机制"></a>什么是共识机制</h2><p>区块链可以看作一本记录所有交易的分布式公开帐簿，区块链网络中的每个参与者都把它看作一本所有权的权威记录。</p>
+<blockquote>
+<p>公开账本历史数据不可篡改，那么公开账本每个新区块由谁来负责写入？</p>
+</blockquote>
+<p>因此需要一种机制来保证区块链中的每一区块只能由一个节点来负责写入，如何选出写入账本数据的节点，这就是共识机制。让平等的参与者按照某种秩序达成一致意见。<br>打个比方，现在有一个中心数据库，所有客户端都能来查询，每个客户端权限都是一样，但如果要对数据库进行增删改，不好意思，每次只允许一个客户端来操作，通俗讲，就是让数据库串行修改数据库。通过一个算法机制来抉择出操作的客户端。这个机制就是共识机制，<strong>所谓的共识就是在人人平等的社会里需要大家共同形成一个共识，产生一个操作者、临时决策者，代表大家来进行中心化的操作，大家按照这个共识来维持去中心化的网络世界。</strong></p>
+<h2 id="主流共识算法"><a href="#主流共识算法" class="headerlink" title="主流共识算法"></a>主流共识算法</h2><p>区块链中的共识算法说到底还是分布式系统中最重要的一致性问题：</p>
+<blockquote>
+<p>在分布式网络中如何保证数据一致性。</p>
+</blockquote>
+<p>说到一致性问题，就不得不提大名鼎鼎的拜占庭将军问题。</p>
+<blockquote>
+<p>Leslie Lamport 证明，当叛变者不超过1/3时，存在有效的算法，不论叛变者如何折腾，忠诚的将军们总能达成一致的结果。如果叛变者过多，则无法保证一定能达到一致性。</p>
+</blockquote>
+<p>对于拜占庭将军问题分两种情况：<br><strong>非拜占庭错误</strong>:针对非拜占庭错误的情况，一般包括 Paxos、Raft 及其变种。<br>分布式数据库设计一般都是基于paxos或raft算法。<br><strong>能容忍拜占庭错误</strong>:对于要能容忍拜占庭错误的情况，一般包括 PBFT(实用拜占庭容错算法)系列、PoW 系列算法等。<br>从概率角度，PBFT 系列算法是确定的，一旦达成共识就不可逆转；而 PoW 系列算法则是不确定的，随着时间推移，被推翻的概率越来越小。</p>
+<h3 id="拜占庭共识算法系列PBFT-DBFT机制"><a href="#拜占庭共识算法系列PBFT-DBFT机制" class="headerlink" title="拜占庭共识算法系列PBFT/DBFT机制"></a>拜占庭共识算法系列PBFT/DBFT机制</h3><h3 id="工作量证明PoW"><a href="#工作量证明PoW" class="headerlink" title="工作量证明PoW"></a>工作量证明PoW</h3><h3 id="权益证明PoS"><a href="#权益证明PoS" class="headerlink" title="权益证明PoS"></a>权益证明PoS</h3><p>PoS 是试图解决在 PoW 中大量资源被浪费的缺点。恶意参与者将存在保证金被罚没的风险，即损失经济利益。</p>
+<h3 id="授权股权证明机制DPOS"><a href="#授权股权证明机制DPOS" class="headerlink" title="授权股权证明机制DPOS"></a>授权股权证明机制DPOS</h3><p>(Delegated Proof of Stake),PoS 的改进算法，DPOS与POS原理相似。与POS的主要区别在于节点选举若干代理，由代理人验证和记账。</p>
+<h2 id="公有链、私有链、联盟链"><a href="#公有链、私有链、联盟链" class="headerlink" title="公有链、私有链、联盟链"></a>公有链、私有链、联盟链</h2><h3 id="公有链——对任何人开放，任何人都能参与"><a href="#公有链——对任何人开放，任何人都能参与" class="headerlink" title="公有链——对任何人开放，任何人都能参与"></a>公有链——对任何人开放，任何人都能参与</h3><p>公有链通常也称为非许可链（Permissionless Blockchain），任何人都可以参与区块链数据维护和读取，容易部署应用程序，完全去中心化不受任何机构控制。<br>公有链是真正意义上的完全去中心化的区块链，它通过密码学保证交易不可篡改，同时也利用密码学验证以及经济上的激励，在互为陌生的网络环境中建立共识，从而形成去中心化的信用机制。在公有链中的共识机制一般是工作量证明（PoW）和权益证明（PoS） 。</p>
+<h3 id="联盟链——仅对联盟成员开放"><a href="#联盟链——仅对联盟成员开放" class="headerlink" title="联盟链——仅对联盟成员开放"></a>联盟链——仅对联盟成员开放</h3><p>联盟链是一种需要注册许可的区块链，这种区块链也称为许可链（Permissioned Blockchain）。联盟链仅限于联盟成员参与，联盟规模可以大到国与国之间，也可以是不同的机构企业之间。<br>区块链上的读写权限、参与记账权限按联盟规则来制定。整个网络由成员机构共同维护，网络接入一般通过成员机构的网关节点接入，共识过程由预先选好的节点控制。因此联盟链一般不采用工作量证明的挖矿机制，而是多采用权益证明（PoS）或PBFT（Practical Byzantine Fault Tolerant）、RAFT等共识算法。<br>和公有链最高每秒完成交易相比，联盟链交易速度更快且交易成本大幅降低。</p>
+<h3 id="私有链——仅行业内部透明，不对外开放"><a href="#私有链——仅行业内部透明，不对外开放" class="headerlink" title="私有链——仅行业内部透明，不对外开放"></a>私有链——仅行业内部透明，不对外开放</h3><p>私有链，仅限于企业、国家机构或者单独个体使用，不完全能够解决信任问题，但是可以改善可审计性。常用于企业内部的数据库管理、审计等，政府的预算和执行，或者政府的行业统计数据等。他们彼此之间需要透明，但没必要对外公众透明。<br>私有链的价值主要是提供安全、可追溯、不可篡改、自动执行的运算平台，可以同时防范来自内部和外部对数据的安全攻击，这个在传统的系统是很难做到的。</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://zhuanlan.zhihu.com/p/34474913" target="_blank" rel="noopener">区块链</a></p>
+<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><h1 id="Docker容器"><a href="#Docker容器" class="headerlink" title="Docker容器"></a>Docker容器</h1>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/21/Golang%E4%B8%AD%E9%98%B6/" rel="prev" title="Golang中阶">
+      <i class="fa fa-chevron-left"></i> Golang中阶
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/22/hexo%E5%B0%8F%E6%8A%80%E5%B7%A7/" rel="next" title="hexo小技巧">
+      hexo小技巧 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#区块链"><span class="nav-number">1.</span> <span class="nav-text">区块链</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是共识机制"><span class="nav-number">1.1.</span> <span class="nav-text">什么是共识机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主流共识算法"><span class="nav-number">1.2.</span> <span class="nav-text">主流共识算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拜占庭共识算法系列PBFT-DBFT机制"><span class="nav-number">1.2.1.</span> <span class="nav-text">拜占庭共识算法系列PBFT&#x2F;DBFT机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作量证明PoW"><span class="nav-number">1.2.2.</span> <span class="nav-text">工作量证明PoW</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权益证明PoS"><span class="nav-number">1.2.3.</span> <span class="nav-text">权益证明PoS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#授权股权证明机制DPOS"><span class="nav-number">1.2.4.</span> <span class="nav-text">授权股权证明机制DPOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公有链、私有链、联盟链"><span class="nav-number">1.3.</span> <span class="nav-text">公有链、私有链、联盟链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公有链——对任何人开放，任何人都能参与"><span class="nav-number">1.3.1.</span> <span class="nav-text">公有链——对任何人开放，任何人都能参与</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联盟链——仅对联盟成员开放"><span class="nav-number">1.3.2.</span> <span class="nav-text">联盟链——仅对联盟成员开放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#私有链——仅行业内部透明，不对外开放"><span class="nav-number">1.3.3.</span> <span class="nav-text">私有链——仅行业内部透明，不对外开放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">1.4.</span> <span class="nav-text">参考文档</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Go"><span class="nav-number">2.</span> <span class="nav-text">Go</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker容器"><span class="nav-number">3.</span> <span class="nav-text">Docker容器</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="chen"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">chen</p>
+  <div class="site-description" itemprop="description">冰冻三尺 非一日之寒</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/747948341@qq.com" title="E-Mail → 747948341@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chen</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
