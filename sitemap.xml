@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/22/hexo%25E5%25B0%258F%25E6%258A%2580%25E5%25B7%25A7/</loc>
+    
+    <lastmod>2020-01-24T13:19:27.506Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/21/%25E5%258C%25BA%25E5%259D%2597%25E9%2593%25BE%25E5%259F%25BA%25E7%25A1%2580/</loc>
     
     <lastmod>2020-01-24T13:13:29.443Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>http://yoursite.com/2020/01/23/%25E4%25B8%25BA%25E4%25BB%2580%25E4%25B9%2588%25E5%2586%2599%25E5%258D%259A%25E5%25AE%25A2/</loc>
     
     <lastmod>2020-01-23T03:20:48.845Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/01/22/hexo%25E5%25B0%258F%25E6%258A%2580%25E5%25B7%25A7/</loc>
-    
-    <lastmod>2020-01-23T03:02:05.216Z</lastmod>
     
   </url>
   
