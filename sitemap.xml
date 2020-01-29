@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/29/Shell%25E8%2584%259A%25E6%259C%25AC/</loc>
+    
+    <lastmod>2020-01-29T14:55:32.671Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/29/kali%25E4%25BD%25BF%25E7%2594%25A8/</loc>
+    
+    <lastmod>2020-01-29T14:55:30.459Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/21/Golang%25E4%25B8%25AD%25E9%2598%25B6/</loc>
     
-    <lastmod>2020-01-28T15:19:47.346Z</lastmod>
+    <lastmod>2020-01-29T11:44:13.474Z</lastmod>
     
   </url>
   
